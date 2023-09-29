@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Poppins:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(45deg, #0a0a0a, #3a4452);
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#board {
+  width: 100vmin;
+  height: 92vmin;
+  background: url("../img/bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: grid;
+  grid-template-rows: repeat(30, 1fr);
+  grid-template-columns: repeat(30, 1fr);
+  box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+  border-radius: 10px;
+  border: 1px solid #717377;
+}
+
+.head {
+  background: linear-gradient(white,black,black);
+  background-color: #00a000;
+  border-radius: 50%;
+  border-top: 3px dotted red;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.snake {
+  background: linear-gradient(rgb(33, 233, 15),rgb(0, 0, 0),black);;
+  border: 2px dotted yellow;
+  border-radius: 50%;
+}
+
+@keyframes foodAnimation {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+.food {
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(red, yellow);
+  border: 1.5px solid red;
+  border-radius: 50%;
+  animation: foodAnimation 100ms infinite;
+}
+
+#scoreBox{
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  font-size: 30px;
+  border-width: bold;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+#hiscoreBox{
+  position: absolute;
+  top: 110px;
+  left: 70px;
+  font-size: 30px;
+  border-width: bold;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
